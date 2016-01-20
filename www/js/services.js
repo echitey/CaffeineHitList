@@ -25,7 +25,7 @@ app.service("YelpService", function ($q, $http,$cordovaGeolocation,$ionicPopup) 
 
 			ionic.Platform.ready(function(){
 				$cordovaGeolocation
-				.getCurrentPosition({$timeout: 10000,enableHighAccuracy: false})
+				.getCurrentPosition({timeout: 10000,enableHighAccuracy: false})
 				.then(function(position){
 					self.lat = position.coords.latitude;
 					self.lon = position.coords.longitude;
@@ -59,7 +59,7 @@ app.service("YelpService", function ($q, $http,$cordovaGeolocation,$ionicPopup) 
 					console.error("Error while getting the Position");
 					console.error(err);
 					$ionicPopup.alert({
-						'title':'Please Switch the Geolocation',
+						'title':'ESSA PORRA TA OFFHAH',
 						'template':'It seems that you have swithced off your geolocation. Please switch it on.'
 					});
 				});
